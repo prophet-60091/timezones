@@ -37,6 +37,7 @@ try:
        
         UTC = datetime.datetime.now(tz=pytz.UTC)
         CET = UTC.astimezone(pytz.timezone('CET'))
+        EST = UTC.astimezone(pytz.timezone('America/New_York'))
         PDT = UTC.astimezone(pytz.timezone('US/Pacific'))
         CDT = UTC.astimezone(pytz.timezone('US/Central'))
         QAUS = UTC.astimezone(pytz.timezone('Australia/Brisbane'))
@@ -47,6 +48,7 @@ try:
         
         utc = UTC.strftime(fmt)
         berlin = CET.strftime(fmt)
+        est = EST.strftime(fmt)
         portland = PDT.strftime(fmt)
         dallas = CDT.strftime(fmt)
         brisbane = QAUS.strftime(fmt)
@@ -68,10 +70,10 @@ try:
         display_4.lcd_display_string(utc, 2)
         
         display_5.lcd_display_string("Berlin", 1)
-        display_5.lcd_display_string(cet, 2)
+        display_5.lcd_display_string(berlin, 2)
         
-        display_5.lcd_display_string("Perth", 1)
-        display_5.lcd_display_string(perth, 2)
+        display_6.lcd_display_string("EST", 1)
+        display_6.lcd_display_string(est, 2)
         
         display_7.lcd_display_string("Brisbane", 1)
         display_7.lcd_display_string(brisbane, 2)
@@ -79,25 +81,25 @@ try:
         time.sleep(1)
 
         # then display team-mate name and time
-        display_2.lcd_display_string("Zach", 1) # Write line of text to first line of display
-        display_2.lcd_display_string(brisbane, 2) # Write just the time to the display
+        #display_2.lcd_display_string("Zach", 1) # Write line of text to first line of display
+        #display_2.lcd_display_string(brisbane, 2) # Write just the time to the display
 
-        display_3.lcd_display_string("Jermey", 1)
-        display_3.lcd_display_string(dallas, 2)
+        #display_3.lcd_display_string("Jermey", 1)
+        #display_3.lcd_display_string(dallas, 2)
         
-        display_4.lcd_display_string("UTC", 1)
-        display_4.lcd_display_string(utc, 2)
+        #display_4.lcd_display_string("UTC", 1)
+        #display_4.lcd_display_string(utc, 2)
         
-        display_5.lcd_display_string("Dustin", 1)
-        display_5.lcd_display_string(cet, 2)
+        #display_5.lcd_display_string("Dustin", 1)
+        #display_5.lcd_display_string(cet, 2)
         
-        display_5.lcd_display_string("Pete", 1)
-        display_5.lcd_display_string(perth, 2)
+        #display_5.lcd_display_string("Pete", 1)
+        #display_5.lcd_display_string(perth, 2)
         
-        display_7.lcd_display_string("Don, Shaffi, James, Mike", 1)
-        display_7.lcd_display_string(brisbane, 2)
+        #display_7.lcd_display_string("Don, Shaffi, James, Mike", 1)
+        #display_7.lcd_display_string(brisbane, 2)
 
-        time.sleep(1)
+        #time.sleep(1)
 
         print('end of loop')
         
